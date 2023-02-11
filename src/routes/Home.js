@@ -16,7 +16,6 @@ function Home() {
   useEffect(() => {
     fetchMovies();
   }, []);
-  console.log(movies);
   return (
     <div>
       {loading ? (
@@ -27,6 +26,7 @@ function Home() {
             return (
               <Movies
                 key={movie.id}
+                id={movie.id}
                 thumbnail={movie.medium_cover_image}
                 title={movie.title}
                 summary={movie.summary}
