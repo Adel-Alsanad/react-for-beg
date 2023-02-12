@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Movies from "../components/Movies";
-import styles from "../Home.module.css";
+import styles from "./Home.module.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ function Home() {
     fetchMovies();
   }, []);
   return (
-    <div className={styles.mainContent}>
+    <div className={styles.container}>
       {loading ? (
         <h1 className={styles.loading}></h1>
       ) : (
@@ -30,8 +30,9 @@ function Home() {
                 id={movie.id}
                 thumbnail={movie.medium_cover_image}
                 title={movie.title}
-                summary={movie.summary}
+                year={movie.year}
                 genres={movie.genres}
+                rating={movie.rating}
               />
             );
           })}

@@ -1,12 +1,16 @@
-.mainContent {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 40px auto;
 }
 
 .moviesList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .loading {
@@ -14,8 +18,8 @@
   border: 20px solid #eaf0f6;
   border-radius: 50%;
   border-top: 20px solid #ff7a59;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   animation: spinner 4s linear infinite;
 }
 
