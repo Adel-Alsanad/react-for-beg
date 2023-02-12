@@ -6,9 +6,7 @@ function Detail() {
   const [movie, setMovie] = useState([]);
   const getMovie = async () => {
     const json = await (
-      await fetch(
-        `https://yts.torrentbay.to/api/v2/movie_details.json?movie_id=${id}`
-      )
+      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
     setMovie(json.data.movie);
   };
